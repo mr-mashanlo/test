@@ -1,0 +1,15 @@
+mixin text-button(title, theme, gap, color, href)
+  if href
+    a.text-button( href=href class='text-button--' + theme class='text-button--' + gap class='text-button--' + color )&attributes(attributes) #{title}
+      case theme
+        when 'left-icon'
+          span.icon-check.text-button__icon
+        when 'right-icon'
+          span.icon-check.text-button__icon
+  else
+    button.text-button( class='text-button--' + theme class='text-button--' + gap class='text-button--' + color )&attributes(attributes) #{title}
+      case theme
+        when 'left-icon'
+          span.icon-check.text-button__icon
+        when 'right-icon'
+          span.icon-check.text-button__icon

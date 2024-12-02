@@ -1,0 +1,6 @@
+mixin text( type, text, size, weight )
+  case type
+    when 'p'
+      p.text( class='text--' + size class='text--' + weight )&attributes(attributes) #{text}
+    when 'span'
+      span.text( class='text--' + size class='text--' + weight )&attributes(attributes) #{text}

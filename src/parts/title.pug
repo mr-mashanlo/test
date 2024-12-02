@@ -1,0 +1,16 @@
+mixin title( type, text, size )
+  case type
+    when 'h1'
+      h1.title( class='title--' + size )&attributes(attributes) #{text}
+    when 'h2'
+      h2.title( class='title--' + size )&attributes(attributes) #{text}
+    when 'h3'
+      h3.title( class='title--' + size )&attributes(attributes) #{text}
+    when 'h4'
+      h4.title( class='title--' + size )&attributes(attributes) #{text}
+    when 'h5'
+      h5.title( class='title--' + size )&attributes(attributes) #{text}
+    when 'h6'
+      h6.title( class='title--' + size )&attributes(attributes) #{text}
+    when 'p'
+      p.title( class='title--' + size )&attributes(attributes) #{text}

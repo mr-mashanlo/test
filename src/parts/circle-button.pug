@@ -1,0 +1,27 @@
+mixin circle-button(icon, size, theme, href)
+  if href
+    a.circle-button( href=href class='circle-button--' + size class='circle-button--' + theme )&attributes(attributes)
+      case icon
+        when 'up'
+          span.icon-chevron-up
+        when 'down'
+          span.icon-chevron-down
+        when 'left'
+          span.icon-chevron-left
+        when 'right'
+          span.icon-chevron-right
+        when 'close'
+          span.icon-close
+  else
+    button.circle-button( class='circle-button--' + size class='circle-button--' + theme )&attributes(attributes)
+      case icon
+        when 'up'
+          span.icon-chevron-up
+        when 'down'
+          span.icon-chevron-down
+        when 'left'
+          span.icon-chevron-left
+        when 'right'
+          span.icon-chevron-right
+        when 'close'
+          span.icon-close

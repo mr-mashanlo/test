@@ -1,0 +1,178 @@
+- var title = 'Components page'
+- var description = 'Description'
+
+include parts/head.pug
+
+body
+  .page
+    section.section
+      .container
+        ul.list
+          li.list__item
+            +title( 'h1', 'Title Extra Large', 'xl' )
+          li.list__item
+            +title( 'h2', 'Title Large', 'lg' )
+          li.list__item
+            +title( 'h3', 'Title Medium', 'md' )
+          li.list__item
+            +title( 'h4', 'Title Small', 'sm' )
+    section.section
+      .container
+        ul.list
+          li.list__item
+            +text( 'p', 'Body text 22', '22', 'bold' )
+          li.list__item
+            +text( 'p', 'Body text 22', '22', 'semibold' )
+          li.list__item
+            +text( 'p', 'Body text 22', '22', 'regular' )
+    section.section
+      .container
+        ul.list
+          li.list__item
+            +text( 'p', 'Body text 20', '20', 'bold' )
+          li.list__item
+            +text( 'p', 'Body text 20', '20', 'semibold' )
+          li.list__item
+            +text( 'p', 'Body text 20', '20', 'regular' )
+    section.section
+      .container
+        ul.list
+          li.list__item
+            +text( 'p', 'Body text 18', '18', 'bold' )
+          li.list__item
+            +text( 'p', 'Body text 18', '18', 'semibold' )
+          li.list__item
+            +text( 'p', 'Body text 18', '18', 'regular' )
+    section.section
+      .container
+        ul.list
+          li.list__item
+            +text( 'p', 'Body text 16', '16', 'bold' )
+          li.list__item
+            +text( 'p', 'Body text 16', '16', 'semibold' )
+          li.list__item
+            +text( 'p', 'Body text 16', '16', 'medium' )
+          li.list__item
+            +text( 'p', 'Body text 16', '16', 'regular' )
+    section.section
+      .container
+        ul.list
+          li.list__item
+            +text( 'p', 'Body text 14', '14', 'bold' )
+          li.list__item
+            +text( 'p', 'Body text 14', '14', 'semibold' )
+          li.list__item
+            +text( 'p', 'Body text 14', '14', 'regular' )
+    section.section
+      .container
+        ul.list
+          li.list__item
+            +text( 'p', 'Body text 12', '12', 'bold' )
+          li.list__item
+            +text( 'p', 'Body text 12', '12', 'semibold' )
+          li.list__item
+            +text( 'p', 'Body text 12', '12', 'regular' )
+    section.section
+      .container
+        ul.list
+          li.list__item
+            +button( 'Попробовать бесплатно', 'regular-green', '#' )
+          li.list__item
+            +button( 'Попробовать бесплатно', 'light-green', '#' )
+    section.section
+      .container
+        ul.list
+          li.list__item
+            +button( 'Попробовать бесплатно', 'regular-green' )
+          li.list__item
+            +button( 'Попробовать бесплатно', 'light-green' )
+    section.section
+      .container
+        ul.list
+          li.list__item
+            +circle-button( 'right', 'lg', 'white', '#' )
+          li.list__item
+            +circle-button( 'right', 'sm', 'gray', '#' )
+          li.list__item
+            +circle-button( 'close', 'sm', 'transition', '#' )
+    section.section
+      .container
+        ul.list
+          li.list__item
+            +circle-button( 'right', 'lg', 'white' )
+          li.list__item
+            +circle-button( 'right', 'sm', 'gray' )
+          li.list__item
+            +circle-button( 'close', 'sm', 'transition' )
+    section.section
+      .container
+        ul.list
+          li.list__item
+            +text-button( 'Button', 'naked', '', 'green', '#' )
+          li.list__item
+            +text-button( 'Button', 'right-icon', 'gap-lg', 'green', '#' )
+          li.list__item
+            +text-button( 'Button', 'right-icon', 'gap-md', 'green', '#' )
+          li.list__item
+            +text-button( 'Button', 'left-icon', 'gap-md', 'green', '#' )
+          li.list__item
+            +text-button( 'Button', 'left-icon', 'gap-sm', 'green', '#' )
+    section.section
+      .container
+        ul.list
+          li.list__item
+            +text-button( 'Button', 'naked', '', 'green' )
+          li.list__item
+            +text-button( 'Button', 'right-icon', 'gap-lg', 'green' )
+          li.list__item
+            +text-button( 'Button', 'right-icon', 'gap-md', 'green' )
+          li.list__item
+            +text-button( 'Button', 'left-icon', 'gap-md', 'green' )
+          li.list__item
+            +text-button( 'Button', 'left-icon', 'gap-sm', 'green' )( class='modal-link' data-href='modal-1' )
+    section.section
+      .container
+        ul.list
+          li.list__item
+            +text-input( 'Label', 'Supporting text' )( type='text' id='query' name='query' value='Text' )
+          li.list__item
+            +text-input( 'Label', 'Supporting text', true )( type='text' id='query_1' name='query_1' value='Text' )
+    section.section
+      .container
+        ul.list
+          li.list__item
+            select.custom-select
+              option(value='audi') Audi
+              option(value='bmw') BMW
+              option(value='mercedes') Mercedes
+          li.list__item
+            select.custom-select
+              option(value='1') Thomas Edison
+              option(value='2') Nikola Tesla
+              option(value='3') Arnold Schwarzenegger
+    section.section
+      .container
+        ul.list
+          li.list__item
+            +text-button( 'Modal 1', 'naked', '', 'green' )( class='modal-link' data-href='modal-1' )
+          li.list__item
+            +text-button( 'Modal 2', 'naked', '', 'green' )( class='modal-link' data-href='modal-2' )
+    section.section
+      .container
+        .modal( data-modal='modal-1' )
+          .modal__inner
+            +circle-button( 'close', 'sm', 'transition' )( class='modal__close' )
+            .modal__header
+              +title( 'h2', 'Оставьте заявку', 'md' )
+              +text( 'p', 'Наш менеджер перезвонит вам и ответит на все Ваши вопросы.', '16', 'regular' )( class='modal__subtitle' )
+            .modal__content
+              form.form
+                +text-input( 'Имя', 'Supporting text' )( type='text' id='form-username' name='form-username' )
+                +text-input( 'Телефон', 'Supporting text' )( type='text' id='form-phone' name='form-phone' )
+                +text-input( 'Email', 'Supporting text' )( type='email' id='form-email' name='form-email' )
+                +button( 'Отправить', 'regular-green' )( class='form__submit' )
+            .modal__footer
+              +text( 'p', 'Оставляя заявку, вы соглашаетесь на обработку ваших персональных данных на условиях, определяемых политикой конфиденциальности', '12', 'regular' )
+        .modal( data-modal='modal-2' )
+          .modal__inner
+            +text( 'p', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, possimus?', '16', 'regular' )

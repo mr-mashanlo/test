@@ -1,0 +1,130 @@
+- var title = 'Home page'
+- var description = 'Description'
+
+include parts/head.pug
+
+body
+  .page
+    header.header
+      
+      .primary-header
+        .header__container
+          .primary-header__inner
+            ul.menu.primary-header__menu
+              li.menu__item
+                a.menu__link( href="#" ) About Us
+              li.menu__item
+                a.menu__link( href="#" ) Reviews
+              li.menu__item
+                a.menu__link( href="#" ) Blog
+              li.menu__item
+                a.menu__link( href="#" ) Contact Us
+            p.primary-header__about Serving Greater Greenville and surrounding areas
+            p.primary-header__review
+              img.primary-header__icon(src='images/google.svg', alt='Google')
+              span |
+              span 400+ 5-star reviews
+      
+      .secondary-header
+        .header__container
+          .secondary-header__inner
+            ul.menu.secondary-header__buttons
+              li.menu__item.call-item
+                button.hamburger.call-button
+                  img.hamburger__icon( src='images/phone-1.svg', alt='hamburger close icon' )
+              li.menu__item
+                a.logo( href="#" ) Logo
+              li.menu__item
+                button.hamburger.menu-button
+                  img.hamburger__hamburger( src='images/hamburger.svg', alt='hamburger open icon' )
+                  span.hamburger__text Services
+            ul.menu.secondary-header__menu
+              li.menu__item
+                a.menu__link.button-link( href="#" ) Emergency
+              li.menu__item
+                a.menu__link( href="#" ) Service plans
+              li.menu__item
+                a.menu__link( href="#" ) Financing
+              li.menu__item
+                a.menu__link( href="#" ) Specials
+              li.menu__item
+                a.menu__link( href="#" ) Service areas
+              li.menu__item.megamenu-item
+                button.menu__link.megamenu-button
+                  span Services
+                  span.icon-chevron-right
+            ul.menu.secondary-header__call
+              li.menu__item
+                a.menu__link.icon-menu__link( href="#" )
+                  img.icon-menu__icon(src='images/phone.svg', alt='phone icon')
+                  span (864) 210-9111
+              li.menu__item
+                a.menu__link.button-link--large( href="#" ) Schedule now
+
+      .megamenu
+        button.megamenu__close
+          span.icon-close
+        ul.grid.megamenu__grid
+          li.grid__item
+            p.megamenu__title AirCare
+            ul.menu.megamenu__menu
+              li.menu__item
+                a.menu__link( href="#" ) Cooling
+              li.menu__item
+                a.menu__link( href="#" ) Heating
+              li.menu__item
+                a.menu__link( href="#" ) Indoor air quality
+              li.menu__item
+                a.menu__link( href="#" ) Ducts, Vents, & airflow
+          li.grid__item
+            p.megamenu__title PowerCare
+            ul.menu.megamenu__menu
+              li.menu__item
+                a.menu__link( href="#" ) Electrical
+              li.menu__item
+                a.menu__link( href="#" ) whole-home Generators
+              li.menu__item
+                a.menu__link( href="#" ) Gas plumbing
+          li.grid__item
+            p.megamenu__title HydroCare
+            ul.menu.megamenu__menu
+              li.menu__item
+                a.menu__link( href="#" ) Plumbing
+              li.menu__item
+                a.menu__link( href="#" ) Water quality
+              li.menu__item
+                a.menu__link( href="#" ) Sump pumps
+              li.menu__item
+                a.menu__link( href="#" ) Water leak detection & repairs
+              li.menu__item
+                a.menu__link( href="#" ) Septic
+              li.menu__item
+                a.menu__link( href="#" ) Sewer & Drains
+          li.grid__item
+            a.menu__link.icon-menu__link( href="#" )
+              img.icon-menu__icon(src='images/emergency.svg', alt='Emergency service')
+              span Emergency service
+          li.grid__item
+            a.menu__link.icon-menu__link( href="#" )
+              img.icon-menu__icon(src='images/audit.svg', alt='Inspections & Energy Audits')
+              span Inspections & Energy Audits
+          li.grid__item
+            a.menu__link.icon-menu__link( href="#" )
+              img.icon-menu__icon(src='images/plan.svg', alt='Service Plans')
+              span Service Plans
+        ul.grid.service__grid
+          li.grid__item
+            .service-card
+              span.service-card__left
+                img.service-card__icon( src='images/gift.svg' )
+              span.service-card__text $100 off <br> First-time customer
+          li.grid__item
+            .service-card
+              span.service-card__left
+                img.service-card__icon( src='images/percent.svg' )
+              span.service-card__text Get a Gree Flexx Eco <br> as Low as $76
+          li.grid__item
+            .service-card.service-card--google
+              span.service-card__left
+                img.service-card__icon( src='images/google-1.svg' )
+              span.service-card__text 400+ <br> 5-star reviews

@@ -1,0 +1,10 @@
+mixin text-input(label, message, error)
+  div.text-input( class=error ? 'text-input--error' : '' )
+    label.text-input__label #{label}
+    div.text-input__area
+      input.text-input__field&attributes(attributes)
+      button.text-input__clear( type="button" )
+        span.icon-close
+    div.text-input__message
+      img.text-input__icon(src="images/warning.svg", alt="Warning icon")
+      span #{message}

@@ -1,0 +1,32 @@
+@use 'config/variables' as variables
+
+.title
+  font-weight: 700
+  letter-spacing: 0
+  &--xl
+    font-size: 2.8rem
+    line-height: 1.2
+    @media ( variables.$screen-md )
+      font-size: 4.2rem
+    @media ( variables.$screen-lg )
+      font-size: 5.2rem
+  &--lg
+    font-size: 2.4rem
+    line-height: 1.3
+    @media ( variables.$screen-md )
+      font-size: 3.6rem
+    @media ( variables.$screen-lg )
+      font-size: 4.6rem
+  &--md
+    font-size: 1.8rem
+    line-height: 1.4
+    @media ( variables.$screen-md )
+      font-size: 2.4rem
+    @media ( variables.$screen-lg )
+      font-size: 3.2rem
+      line-height: 1.3
+  &--sm
+    font-size: 1.6rem
+    line-height: 1.4
+    @media ( variables.$screen-md )
+      font-size: 2rem

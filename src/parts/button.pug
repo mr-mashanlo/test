@@ -1,0 +1,5 @@
+mixin button(title, color, href)
+  if href
+    a.button( href=href class='button--' + color )&attributes(attributes) #{title}
+  else
+    button.button( class='button--' + color )&attributes(attributes) #{title}
