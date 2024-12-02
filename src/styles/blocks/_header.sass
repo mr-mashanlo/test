@@ -75,6 +75,10 @@
   @media ( variables.$screen-lg )
     display: none
 
+.nav-item
+  @media ( variables.$screen-lg )
+    display: none
+
 .header
   font-family: 'Jost'
   &__container
@@ -310,3 +314,7 @@
           transform: translateY(-50%)
       .service-card__icon
         width: auto
+  &-item
+    display: none
+    @media ( variables.$screen-lg )
+      display: flex

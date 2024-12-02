@@ -1,21 +1,45 @@
+function createWidthListener( onLessThan1024, onGreaterThan1024 ) {
+  let isLessThan1024 = window.innerWidth < 1024;
+  const handleResize = () => {
+    const currentWidthLessThan1024 = window.innerWidth < 1024;
+    if ( currentWidthLessThan1024 !== isLessThan1024 ) {
+      isLessThan1024 = currentWidthLessThan1024;
+      if ( isLessThan1024 ) {
+        onLessThan1024();
+      } else {
+        onGreaterThan1024();
+      }
+    }
+  };
+
+  window.addEventListener( 'resize', handleResize );
+
+  if ( isLessThan1024 ) {
+    onLessThan1024();
+  } else {
+    onGreaterThan1024();
+  }
+
+  return () => window.removeEventListener( 'resize', handleResize );
+}
+
 export function initHeader() {
 
   const header = document.querySelector( '.header' );
 
-  init();
-
-  function init() {
-    if ( window.innerWidth < 1024 ) {
+  createWidthListener(
+    () => {
       createPhoneModal();
       createMenuSlider();
       handleMenuButtonClick();
       handleCallButtonClick();
       handleMegamenuButtonClick();
       handleCloseButtonClick();
-    } else {
+    },
+    () => {
       handleServiceButtonClick();
     }
-  }
+  );
 
   function createMenuSlider() {
     const primary = header.querySelector( '.primary-header__menu' );
@@ -35,7 +59,7 @@ export function initHeader() {
   }
 
   function handleMenuButtonClick() {
-    const button = header.querySelector( '.menu-button' );
+    const button = header.querySelector( '.nav-button' );
     const menu = header.querySelector( '.header-mobile' );
     button.addEventListener( 'click', () => {
       menu.classList.toggle( 'header-modal--active' );
